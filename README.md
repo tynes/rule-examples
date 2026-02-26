@@ -373,6 +373,7 @@ rule-examples/
         │          │       │            │        │           │
         │ Tx goes  │       │ Tx held    │        │ ETH       │
         │ through  │       │ for review │        │ refunded  │
+        │          │       │            │        │ on settle │  
         └──────────┘       └─────┬──────┘        └───────────┘
                                  │
                     ┌────────────┼────────────┐
@@ -383,10 +384,10 @@ rule-examples/
                     │            │            │
                     ▼            ▼            ▼
               ┌──────────┐ ┌─────────┐ ┌──────────────┐
-              │ Approved │ │Refunded │ │ Re-evaluates │
-              │          │ │         │ │ rules; may   │
-              │ Tx goes  │ │ ETH     │ │ approve or   │
-              │ through  │ │ returned│ │ stay pending │
+              │ Approved │ │ Rejected│ │ Re-evaluates │
+              │          │ │         │ │ rules; send  │
+              │          │ │         │ │ ETH through  │
+              │          │ │         │ │ or refund    │
               └──────────┘ └─────────┘ └──────────────┘
 ```
 
